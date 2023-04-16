@@ -7,11 +7,23 @@
         border-radius: 10px;
         display: flex;
         text-align: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        position: absolute;
+        bottom: 32px;
+        left: 0;
+        right: 0;
     }
 
     span {
         display: block;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    strong{
+        color: #444;
+        font-size: 14px;
+        font-weight: 500;
     }
 </style>
 
