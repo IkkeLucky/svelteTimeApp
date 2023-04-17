@@ -1,3 +1,9 @@
+<script>
+    import {getWeatherFrom} from '../services/weather.js';
+    const weatherPromise = getWeatherFrom();
+</script>
+
+
 <style>
     footer {
         border: 2px solid #000;
@@ -27,10 +33,12 @@
     }
 </style>
 
+
+{#await weatherPromise then weather }
 <footer>
     <div>
         <span>
-            33%
+            {weather.humidity}
         </span>
         <strong>
             Humidity
@@ -39,7 +47,7 @@
 
     <div>
         <span>
-            12 km/h
+            {weather.windSpeed}
         </span>
         <strong>
             Windspeed
@@ -48,10 +56,12 @@
 
     <div>
         <span>
-            12°
+            {weather.feelsLike}
         </span>
         <strong>
             Feels Like
         </strong>
     </div>
 </footer>
+{/await}
+

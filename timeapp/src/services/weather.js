@@ -6,7 +6,7 @@ const FETCH_OPTIONS = {
 	}
 };
 
-export async function getWeatherFrom (query = 'Buenos Aires') {
+export async function getWeatherFrom (query = 'Denmark') {
     const response = await fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${query}`, FETCH_OPTIONS) 
 
     const data = await response.json()
